@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+                name="viewModel"
+                type="com.prasetyanurangga.kamar.viewmodel.UserViewModel" />
+
+
+        <variable
+                name="spinnerAdapter"
+                type="android.widget.ArrayAdapter" />
+
+
+        <import type="android.view.View" />
+
+    </data>
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+    <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_view_books"
+                    android:layout_width="match_parent"
+                    android:layout_height="400dp"
+                    tools:listitem="@layout/list_item_user" />
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:orientation="vertical"
+                >
+
+            <EditText
+                    android:layout_width="match_parent"
+                    android:id="@+id/et_email"
+                    android:text="Email"
+                    android:layout_height="wrap_content"/>
+
+            <EditText
+                    android:layout_width="match_parent"
+                    android:id="@+id/et_nama"
+                    android:text="Email"
+                    android:layout_height="wrap_content"/>
+
+            <Button
+                    android:layout_width="match_parent"
+                    android:text="Save"
+                    android:id="@+id/btn_save"
+                    android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/white"
+                android:visibility="@{viewModel.isLoading ? View.VISIBLE : View.GONE}">
+
+            <ProgressBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center" />
+
+        </FrameLayout>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+    </ScrollView>
+</layout>
