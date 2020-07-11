@@ -19,4 +19,9 @@ class UserViewModel (private var userLocalRepository: UserLocalRepository): View
         userLocalRepository.deleteUser(user)
         return userLocalRepository.getUsers();
     }
+
+    fun updateUser(user: User): LiveData<List<User>>{
+        userLocalRepository.updateUser(user)
+        return userLocalRepository.getUsers();
+    }
 }

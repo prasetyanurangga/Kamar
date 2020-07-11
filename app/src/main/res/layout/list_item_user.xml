@@ -7,6 +7,7 @@
         <variable
                 name="user"
                 type="com.prasetyanurangga.kamar.database.model.User" />
+
     </data>
 
     <androidx.cardview.widget.CardView
@@ -20,25 +21,50 @@
 
         <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-            <TextView
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+            <LinearLayout
+                    android:layout_weight="5"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:padding="8dp"
-                    android:text="@{user.name}"
-                    android:textColor="@android:color/black"
-                    android:textSize="16sp" />
+                    android:orientation="vertical">
 
-            <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="8dp"
-                    android:text="@{user.email}"
-                    android:textColor="@android:color/black"
-                    android:textSize="16sp" />
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:text="@{user.name}"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp" />
 
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="8dp"
+                        android:text="@{user.email}"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp" />
+
+            </LinearLayout>
+            <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_weight="2"
+                    android:src="@drawable/ic_edit"
+                    android:elevation="5dp"
+                    android:background="@color/colorPrimary"
+                    android:padding="10dp"
+                    android:id="@+id/btn_edit"
+                    android:layout_height="match_parent"/>
+
+            <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_weight="2"
+                    android:elevation="5dp"
+                    android:id="@+id/btn_delete"
+                    android:background="@color/colorAccent"
+                    android:src="@drawable/ic_delete"
+                    android:padding="10dp"
+                    android:layout_height="match_parent"/>
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 </layout>

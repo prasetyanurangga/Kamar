@@ -28,4 +28,10 @@ class UserLocalRepository(appDatabase: AppDatabase) {
         }
     }
 
+    fun updateUser(user: User){
+        CoroutineScope(Dispatchers.IO).launch {
+            userDao.updateUser(user)
+        }
+    }
+
 }

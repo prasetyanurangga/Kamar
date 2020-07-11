@@ -20,7 +20,7 @@ class KamarApplication: Application() {
         appComponent = DaggerAppComponent
                 .builder()
                 .application(this)
-             .databaseModule(DatabaseModule())
+                .databaseModule(DatabaseModule())
                 .build()
 
     }

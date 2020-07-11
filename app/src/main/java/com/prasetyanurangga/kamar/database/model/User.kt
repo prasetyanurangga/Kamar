@@ -9,8 +9,10 @@ import com.prasetyanurangga.kamar.util.Constanta
     tableName = Constanta.Database.User
 )
 data class User (
-    @PrimaryKey
-    val uid: Int,
+    @PrimaryKey(
+        autoGenerate = true
+    )
+    val uid: Int?,
 
     @ColumnInfo( name = "name" )
     val name: String,

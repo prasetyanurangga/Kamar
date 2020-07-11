@@ -1,10 +1,7 @@
 package com.prasetyanurangga.kamar.database.dao
 
 import androidx.lifecycle.LiveData
-import androidx.room.Dao
-import androidx.room.Delete
-import androidx.room.Insert
-import androidx.room.Query
+import androidx.room.*
 import com.prasetyanurangga.kamar.database.model.User
 import com.prasetyanurangga.kamar.util.Constanta
 
@@ -19,6 +16,9 @@ interface UserDao {
 
     @Insert
     fun saveUser(vararg user: User)
+
+    @Update
+    fun updateUser(vararg user: User)
 
     @Delete
     fun deleteUser(vararg user: User)
