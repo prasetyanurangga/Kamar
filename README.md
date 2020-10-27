@@ -1,5 +1,5 @@
 # Kamar
-Kamar is an android project created with the Kotlin programming language
+Kamar is a kotlin project that I made to try Room, Dagger 2, Kontlinx, Material Design, Lifecyle, Coroutine
 # Library used
 
   - [Room](https://developer.android.com/topic/libraries/architecture/room)
